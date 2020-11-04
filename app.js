@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 
  //database connection
- const dbURI = 'mongodb+srv://<user-name>:<password>@cluster0.vzjk8.mongodb.net/<dbname>?retryWrites=true&w=majority';
+ const dbURI = 'mongodb+srv://<username>:<password>@cluster0.vzjk8.mongodb.net/<dbname>?retryWrites=true&w=majority';
  mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
    .then((result) => app.listen(4000))
     .catch((err) => console.log(err));
